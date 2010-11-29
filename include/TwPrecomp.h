@@ -12,9 +12,9 @@
 //  ---------------------------------------------------------------------------
 
 
-#if !defined ANT_TW_PRECOMP_INCLUDED
-#define ANT_TW_PRECOMP_INCLUDED
+#pragma once
 
+#define GL_GLEXT_PROTOTYPES 1
 
 #if defined _MSC_VER
 #   pragma warning(disable: 4514)   // unreferenced inline function has been removed
@@ -80,8 +80,8 @@
 #	include <OpenGL/gl.h>
 #else
 #	include <GL/gl.h>  // must be included after windows.h
+
 #endif
 #define  ANT_OGL_HEADER_INCLUDED
 
 
-#endif  // !defined ANT_TW_PRECOMP_INCLUDED
