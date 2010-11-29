@@ -14,8 +14,7 @@
 //
 //  ---------------------------------------------------------------------------
 
-// #include <GL/glfw.h>
-#include "MiniGLFW.h" // a subset of GLFW.h needed to compile TwEventGLFW.c
+#include <GL/glfw.h>
 // note: AntTweakBar.dll does not need to link with GLFW, 
 // it just needs some definitions for its helper functions.
 

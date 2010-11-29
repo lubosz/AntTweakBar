@@ -15,8 +15,7 @@
 //  ---------------------------------------------------------------------------
 
 
-// #include <SDL/SDL.h>
-#include "MiniSDL.h" // a subset of SDL.h needed to compile TwEventSDL.c
+#include <SDL/SDL.h>
 // note: AntTweakBar.dll does not need to link with SDL, 
 // it just needs some definitions for its helper functions.
 
