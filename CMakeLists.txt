@@ -9,11 +9,10 @@ include_directories(
 )
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
-file(GLOB_RECURSE C_SOURCES src/*.c)
 
 ADD_DEFINITIONS(-D_UNIX)
 	 
-add_library(AntTweakBar ${SOURCES} ${C_SOURCES})
+add_library(AntTweakBar ${SOURCES})
 target_link_libraries(AntTweakBar GL)
 
 add_executable(TwAdvanced1 examples/TwAdvanced1.cpp)
