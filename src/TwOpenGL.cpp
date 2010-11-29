@@ -11,11 +11,9 @@
 
 
 #include "TwPrecomp.h"
-#include "LoadOGL.h"
+//#include "LoadOGL.h"
 #include "TwOpenGL.h"
 #include "TwMgr.h"
-
-
 
 #include <stdio.h>
 #include <string.h>
@@ -97,11 +95,6 @@ static void UnbindFont(GLuint _FontTexID)
 
 int CTwGraphOpenGL::Init()
 {
-    if( LoadOpenGL()==0 )
-    {
-        g_TwMgr->SetLastError(g_ErrCantLoadOGL);
-        return 0;
-    }
 
     m_Drawing = false;
     m_FontTexID = 0;
@@ -140,11 +133,6 @@ int CTwGraphOpenGL::Shut()
     UnbindFont(m_FontTexID);
 
     int Res = 1;
-    if( UnloadOpenGL()==0 )
-    {
-        g_TwMgr->SetLastError(g_ErrCantUnloadOGL);
-        Res = 0;
-    }
 
     return Res;
 }

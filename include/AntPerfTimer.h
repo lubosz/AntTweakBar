@@ -11,29 +11,7 @@
 //
 //  ---------------------------------------------------------------------------
 
-#if !defined ANT_PERF_TIMER_INCLUDED
-#define ANT_PERF_TIMER_INCLUDED
-
-#ifndef  __cplusplus
-#   error This is a C++ header
-#endif  // __cplusplus
-
-
-#if defined(WIN32) || defined(WIN64) || defined(_WIN32) || defined(_WIN64)
-
-    #include <windows.h>
-    #include <tchar.h>
-
-    struct PerfTimer
-    {
-        inline        PerfTimer()   { if( !QueryPerformanceFrequency(&Freq) ) MessageBox(NULL, _T("Precision timer not supported"), _T("Problem"), MB_ICONEXCLAMATION); Reset(); }
-        inline void   Reset()       { QueryPerformanceCounter(&Start); }
-        inline double GetTime()     { if( QueryPerformanceCounter(&End) ) return ((double)End.QuadPart - (double)Start.QuadPart)/((double)Freq.QuadPart); else return 0; }
-    protected:
-        LARGE_INTEGER Start, End, Freq;
-    };
-
-#else // !_WIN (-> LINUX)
+#pragma once
 
     #include <sys/time.h>
     #include <unistd.h>
@@ -50,8 +28,3 @@
         struct timeval Start, End;
         struct timezone TZ;
     };
-
-#endif // _WIN
-
-
-#endif // ANT_PERF_TIMER_INCLUDED

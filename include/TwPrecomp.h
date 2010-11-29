@@ -28,27 +28,13 @@
 #include <list>
 #include <set>
 
-#if defined(_UNIX)
 #   define ANT_UNIX
 #   include <X11/cursorfont.h>
 #   define GLX_GLXEXT_LEGACY
 #   include <GL/glx.h>
 #   include <X11/Xatom.h>
 #   include <unistd.h>
-#elif defined(_MACOSX)
-#   define ANT_OSX
-#   include <unistd.h>
-#   include <Foundation/Foundation.h>
-#   include <NSImage.h>
-#   include <NSCursor.h>
-#endif
 
-#if defined(ANT_OSX)
-#	include <OpenGL/gl.h>
-#else
-#	include <GL/gl.h>  // must be included after windows.h
+#	include <GL/gl.h>
 
-#endif
 #define  ANT_OGL_HEADER_INCLUDED
-
-
