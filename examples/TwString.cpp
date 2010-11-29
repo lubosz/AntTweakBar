@@ -19,7 +19,10 @@
 #include <AntTweakBar.h>
 
 #define GLFW_DLL
-#include "glfw.h"
+#include <GL/glfw.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 #include <sstream>
 #include <vector>

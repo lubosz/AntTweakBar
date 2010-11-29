@@ -28,10 +28,14 @@
 #include <AntTweakBar.h>
 
 #define GLFW_DLL // use GLFW as a dynamically linked library
-#include "glfw.h"
+#include <GL/glfw.h>
 
 #include <cmath>
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 #if !defined(_WIN32) && !defined(_WIN64)
 #   define _snprintf snprintf
 #endif
