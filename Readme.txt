@@ -13,3 +13,5 @@ http://www.antisphere.com/Wiki/tools:anttweakbar
 
 
 Philippe Decaudin - http://www.antisphere.com - 2006/05/20
+
+CMake Build by Lubosz Sarnecki 29.11.2010
