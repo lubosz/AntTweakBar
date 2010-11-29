@@ -30,6 +30,10 @@
 #endif  // defined(ANT_WINDOWS)
 
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 using namespace std;
 
 CTwMgr *g_TwMgr = NULL;
@@ -733,7 +737,7 @@ void ANT_CALL CQuaternionExt::SummaryCB(char *_SummaryString, size_t _SummaryMax
     if( ext )
     {
         if( ext->m_AAMode )
-            _snprintf(_SummaryString, _SummaryMaxLength, "V={%.2f,%.2f,%.2f} A=%.0f°", ext->Vx, ext->Vy, ext->Vz, ext->Angle);
+            _snprintf(_SummaryString, _SummaryMaxLength, "V={%.2f,%.2f,%.2f} A=%.0fï¿½", ext->Vx, ext->Vy, ext->Vz, ext->Angle);
         else if( ext->m_IsDir )
         {
             //float d[] = {1, 0, 0};
@@ -5980,7 +5984,7 @@ void CTwMgr::SetCursor(CTwMgr::CCursor _Cursor)
 
 #elif defined(ANT_UNIX)
 
-#include "res/TwXCursors.h"
+#include "TwXCursors.h"
 
 static XErrorHandler s_PrevErrorHandler = NULL;
 

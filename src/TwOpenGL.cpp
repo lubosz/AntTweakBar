@@ -15,6 +15,9 @@
 #include "TwOpenGL.h"
 #include "TwMgr.h"
 
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 
 const char *g_ErrCantLoadOGL    = "Cannot load OpenGL library dynamically";
